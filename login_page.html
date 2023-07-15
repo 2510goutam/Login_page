@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intern Crowd - Login/Sign Up</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="container">
+    <h1>Intern Crowd</h1>
+    <form id="login-form">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="username-login">Username:</label>
+        <input type="text" id="username-login" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" name="password" required>
+      </div>
+      <input type="submit" value="Login">
+      <div class="switch-form">
+        <p>Don't have an account? <a href="#" onclick="switchForm('signup-form')">Sign up</a></p>
+      </div>
+    </form>
+    <form id="signup-form" style="display: none;">
+      <h2>Sign Up</h2>
+      <div class="form-group">
+        <label for="username-signup">Username:</label>
+        <input type="text" id="username-signup" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input type="email" id="email-signup" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input type="password" id="password-signup" name="password" required>
+      </div>
+      <input type="submit" value="Sign Up">
+      <div class="switch-form">
+        <p>Already have an account? <a href="#" onclick="switchForm('login-form')">Login</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function switchForm(formId) {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById(formId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
